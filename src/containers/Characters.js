@@ -8,9 +8,8 @@ const Characters = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          `https://lereacteur-marvel-api.herokuapp.com/characters?apiKey=${process.env.MARVEL_API_KEY}`
-        );
+        const response = await axios.get("http://localhost:3000/characters");
+        console.log(response.data);
         setData(response.data);
         setIsLoading(false);
       } catch (error) {
@@ -29,7 +28,7 @@ const Characters = () => {
           <div>
             <h4>{character.name}</h4>
             <img
-              style={{ height: 30 }}
+              style={{ height: 20 }}
               src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
               alt="character"
             />
