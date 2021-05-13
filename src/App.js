@@ -6,9 +6,11 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Header />
         <Route path="/">
           <Characters />
         </Route>
+        <Footer />
       </Switch>
     </Router>
   );
