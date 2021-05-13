@@ -1,10 +1,16 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Characters from "./containers/Characters";
 
 function App() {
   return (
-    <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Characters />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
