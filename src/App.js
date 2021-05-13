@@ -12,8 +12,8 @@ function App() {
         <Route path="/">
           <Characters />
         </Route>
-        <Footer />
       </Switch>
+      <Footer />
     </Router>
   );
 }
